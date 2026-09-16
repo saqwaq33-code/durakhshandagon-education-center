@@ -32,12 +32,15 @@ const getValue = (translations: Translations, key: string): string => {
 }
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-  const storedLanguage = localStorage.getItem('language')
-  const browserLanguage: Language =
-    storedLanguage && languages.includes(storedLanguage as Language)
+  const [language, setLanguageState] = useState<Language>(() => {
+    if (typeof window === 'undefined') {
+      return 'tg'
+    }
+    const storedLanguage = window.localStorage.getItem('language')
+    return storedLanguage && languages.includes(storedLanguage as Language)
       ? (storedLanguage as Language)
       : 'tg'
-  const [language, setLanguageState] = useState<Language>(browserLanguage)
+  })
 
   const setLanguage = (nextLanguage: Language) => {
     setLanguageState(nextLanguage)
