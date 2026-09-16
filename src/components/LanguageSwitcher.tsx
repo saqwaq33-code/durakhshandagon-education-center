@@ -4,13 +4,13 @@ import type { Language } from '../context/LanguageContext'
 const options: Language[] = ['tg', 'ru', 'en']
 
 const LanguageSwitcher = () => {
-  const { language, setLanguage } = useLanguage()
+  const { language, setLanguage, t } = useLanguage()
 
   return (
     <div
       className="inline-flex rounded-lg border border-slate-200 bg-white p-1 shadow-sm"
       role="group"
-      aria-label="Language switcher"
+      aria-label={t('common.languageSwitcher')}
     >
       {options.map((option) => (
         <button

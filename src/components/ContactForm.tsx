@@ -3,11 +3,11 @@ import { useLanguage } from '../hooks/useLanguage'
 
 const ContactForm = () => {
   const { t } = useLanguage()
-  const [sent, setSent] = useState(false)
+  const [statusMessage, setStatusMessage] = useState<string | null>(null)
 
   const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
-    setSent(true)
+    setStatusMessage(t('contact.form.success'))
     event.currentTarget.reset()
   }
 
@@ -58,9 +58,9 @@ const ContactForm = () => {
         {t('contact.form.submit')}
       </button>
 
-      {sent && (
+      {statusMessage && (
         <p className="text-sm text-emerald-700" role="status" aria-live="polite">
-          {t('contact.form.success')}
+          {statusMessage}
         </p>
       )}
     </form>
