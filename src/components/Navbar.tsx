@@ -9,6 +9,13 @@ const navItemClass = ({ isActive }: { isActive: boolean }) =>
 
 const Navbar = () => {
   const { t } = useLanguage()
+  const navItems = [
+    { to: '/', label: t('nav.home'), end: true },
+    { to: '/courses', label: t('nav.courses') },
+    { to: '/about', label: t('nav.about') },
+    { to: '/contact', label: t('nav.contact') },
+    { to: '/profile', label: t('nav.profile') },
+  ]
 
   return (
     <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/90 backdrop-blur">
@@ -21,39 +28,19 @@ const Navbar = () => {
         </div>
 
         <nav className="mt-3 flex flex-wrap items-center gap-2 md:hidden">
-          <NavLink to="/" className={navItemClass} end>
-            {t('nav.home')}
-          </NavLink>
-          <NavLink to="/courses" className={navItemClass}>
-            {t('nav.courses')}
-          </NavLink>
-          <NavLink to="/about" className={navItemClass}>
-            {t('nav.about')}
-          </NavLink>
-          <NavLink to="/contact" className={navItemClass}>
-            {t('nav.contact')}
-          </NavLink>
-          <NavLink to="/profile" className={navItemClass}>
-            {t('nav.profile')}
-          </NavLink>
+          {navItems.map((item) => (
+            <NavLink key={item.to} to={item.to} className={navItemClass} end={item.end}>
+              {item.label}
+            </NavLink>
+          ))}
         </nav>
 
         <nav className="mt-3 hidden items-center gap-2 md:flex">
-          <NavLink to="/" className={navItemClass} end>
-            {t('nav.home')}
-          </NavLink>
-          <NavLink to="/courses" className={navItemClass}>
-            {t('nav.courses')}
-          </NavLink>
-          <NavLink to="/about" className={navItemClass}>
-            {t('nav.about')}
-          </NavLink>
-          <NavLink to="/contact" className={navItemClass}>
-            {t('nav.contact')}
-          </NavLink>
-          <NavLink to="/profile" className={navItemClass}>
-            {t('nav.profile')}
-          </NavLink>
+          {navItems.map((item) => (
+            <NavLink key={item.to} to={item.to} className={navItemClass} end={item.end}>
+              {item.label}
+            </NavLink>
+          ))}
         </nav>
       </div>
     </header>
