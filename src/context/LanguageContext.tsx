@@ -1,4 +1,4 @@
-import { createContext, useMemo, useState, type ReactNode } from 'react'
+import { createContext, useEffect, useMemo, useState, type ReactNode } from 'react'
 import tg from '../i18n/tg.json'
 import ru from '../i18n/ru.json'
 import en from '../i18n/en.json'
@@ -16,6 +16,7 @@ type LanguageContextType = {
 }
 
 const dictionary: Record<Language, Translations> = { tg, ru, en }
+const languages: Language[] = ['tg', 'ru', 'en']
 
 export const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
 
@@ -31,13 +32,21 @@ const getValue = (translations: Translations, key: string): string => {
 }
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-  const browserLanguage = (localStorage.getItem('language') as Language) || 'tg'
+  const storedLanguage = localStorage.getItem('language')
+  const browserLanguage: Language =
+    storedLanguage && languages.includes(storedLanguage as Language)
+      ? (storedLanguage as Language)
+      : 'tg'
   const [language, setLanguageState] = useState<Language>(browserLanguage)
 
   const setLanguage = (nextLanguage: Language) => {
     setLanguageState(nextLanguage)
     localStorage.setItem('language', nextLanguage)
   }
+
+  useEffect(() => {
+    document.documentElement.lang = language
+  }, [language])
 
   const value = useMemo(
     () => ({
