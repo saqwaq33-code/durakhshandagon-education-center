@@ -4,7 +4,11 @@ import { useLanguage } from '../hooks/useLanguage'
 const Profile = () => {
   const { t } = useLanguage()
 
-  const menuItems = [t('profile.myCourses'), t('profile.progress'), t('profile.certificates')]
+  const menuItems = [
+    { id: 'courses', label: t('profile.myCourses') },
+    { id: 'progress', label: t('profile.progress') },
+    { id: 'certificates', label: t('profile.certificates') },
+  ]
 
   return (
     <section className="grid gap-6 page-enter lg:grid-cols-[260px_1fr]">

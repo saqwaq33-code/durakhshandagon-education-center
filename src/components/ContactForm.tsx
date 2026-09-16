@@ -58,7 +58,11 @@ const ContactForm = () => {
         {t('contact.form.submit')}
       </button>
 
-      {sent && <p className="text-sm text-emerald-700">{t('contact.form.success')}</p>}
+      {sent && (
+        <p className="text-sm text-emerald-700" role="status" aria-live="polite">
+          {t('contact.form.success')}
+        </p>
+      )}
     </form>
   )
 }
