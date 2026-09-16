@@ -1,0 +1,64 @@
+{
+  "nav": {
+    "home": "Главная",
+    "courses": "Курсы",
+    "about": "О нас",
+    "contact": "Контакты",
+    "profile": "Профиль"
+  },
+  "footer": {
+    "tagline": "Качественное образование для яркого будущего"
+  },
+  "common": {
+    "readMore": "Подробнее",
+    "languageSwitcher": "Переключатель языка"
+  },
+  "home": {
+    "heroTitle": "Durakhshandagon — образование международного уровня",
+    "heroDescription": "Мы предлагаем языковые, IT и математические программы с опытными преподавателями.",
+    "viewCourses": "Смотреть курсы",
+    "contactUs": "Связаться",
+    "popularCourses": "Популярные курсы",
+    "testimonials": "Отзывы студентов"
+  },
+  "courses": {
+    "title": "Все курсы",
+    "description": "Современные программы для детей, подростков и взрослых.",
+    "notFound": "Курс не найден.",
+    "backToList": "Вернуться к списку",
+    "enrollNow": "Записаться"
+  },
+  "about": {
+    "title": "О центре",
+    "description": "Durakhshandagon Education Center создан для развития образованного и конкурентоспособного поколения.",
+    "teachers": "Наши преподаватели"
+  },
+  "contact": {
+    "title": "Контакты",
+    "description": "Свяжитесь с нами для консультации и записи.",
+    "info": {
+      "phone": "Телефон: +992 900 12 34 56",
+      "email": "Email: info@durakhshandagon.tj",
+      "address": "Адрес: г. Душанбе, улица Рудаки 24"
+    },
+    "form": {
+      "name": "Имя",
+      "email": "Email",
+      "message": "Сообщение",
+      "submit": "Отправить",
+      "success": "Ваше сообщение успешно отправлено!"
+    }
+  },
+  "profile": {
+    "title": "Профиль студента",
+    "description": "Здесь вы увидите свои курсы, прогресс и сертификаты.",
+    "menu": "Меню",
+    "myCourses": "Мои курсы",
+    "progress": "Прогресс",
+    "certificates": "Сертификаты",
+    "stats": {
+      "activeCourses": "Активные курсы",
+      "completed": "Завершённые курсы"
+    }
+  }
+}

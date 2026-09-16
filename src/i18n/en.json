@@ -1,0 +1,64 @@
+{
+  "nav": {
+    "home": "Home",
+    "courses": "Courses",
+    "about": "About",
+    "contact": "Contact",
+    "profile": "Profile"
+  },
+  "footer": {
+    "tagline": "Quality education for a brighter future"
+  },
+  "common": {
+    "readMore": "Read more",
+    "languageSwitcher": "Language switcher"
+  },
+  "home": {
+    "heroTitle": "Durakhshandagon Center — International-Level Education",
+    "heroDescription": "We offer language, IT, and mathematics programs taught by experienced educators.",
+    "viewCourses": "View Courses",
+    "contactUs": "Contact Us",
+    "popularCourses": "Popular Courses",
+    "testimonials": "Student Testimonials"
+  },
+  "courses": {
+    "title": "All Courses",
+    "description": "Modern programs for children, teens, and adults.",
+    "notFound": "Course not found.",
+    "backToList": "Back to list",
+    "enrollNow": "Enroll now"
+  },
+  "about": {
+    "title": "About the Center",
+    "description": "Durakhshandagon Education Center was founded to grow an educated and globally competitive generation.",
+    "teachers": "Our Teachers"
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "Reach out for consultation and enrollment.",
+    "info": {
+      "phone": "Phone: +992 900 12 34 56",
+      "email": "Email: info@durakhshandagon.tj",
+      "address": "Address: Rudaki Street 24, Dushanbe"
+    },
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Send",
+      "success": "Your message has been sent successfully!"
+    }
+  },
+  "profile": {
+    "title": "Student Profile",
+    "description": "Track your courses, progress, and certificates here.",
+    "menu": "Menu",
+    "myCourses": "My Courses",
+    "progress": "Progress",
+    "certificates": "Certificates",
+    "stats": {
+      "activeCourses": "Active Courses",
+      "completed": "Completed Courses"
+    }
+  }
+}
