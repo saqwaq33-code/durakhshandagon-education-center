@@ -1,0 +1,167 @@
+.app-shell {
+  min-height: 100vh;
+  color: #e5edf7;
+  background: linear-gradient(160deg, #12161d, #1f2734 60%, #182230);
+  padding: 1rem;
+}
+
+.hero-panel {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  border: 1px solid #384458;
+  border-radius: 16px;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.eyebrow {
+  color: #e4bd52;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-content: start;
+}
+
+.grid-layout {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1fr;
+  gap: 1rem;
+}
+
+.panel {
+  border: 1px solid #394860;
+  border-radius: 14px;
+  padding: 0.8rem;
+  background: rgba(8, 12, 18, 0.62);
+  min-height: 20rem;
+}
+
+.media-list {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.media-card {
+  border: 1px solid #35445f;
+  border-radius: 10px;
+  padding: 0.6rem;
+}
+
+.media-card img,
+.media-card video,
+.fullscreen-player img,
+.fullscreen-player video {
+  width: 100%;
+  max-height: 11rem;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.inline-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.scene-nav {
+  display: grid;
+  gap: 0.4rem;
+  list-style: none;
+  padding: 0;
+}
+
+.scene-nav li {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 0.3rem;
+}
+
+.scene-editor {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.element-editor {
+  border: 1px dashed #566885;
+  border-radius: 8px;
+  padding: 0.5rem;
+}
+
+.inline-clip {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.4rem;
+}
+
+.timeline {
+  display: grid;
+  gap: 0.4rem;
+  padding-left: 1rem;
+}
+
+.timeline li {
+  border-left: 3px solid #e4bd52;
+  padding-left: 0.5rem;
+}
+
+label,
+input,
+select,
+textarea,
+button {
+  font: inherit;
+}
+
+input,
+select,
+textarea,
+button {
+  border-radius: 8px;
+  border: 1px solid #51617b;
+  background: #101824;
+  color: #e5edf7;
+  padding: 0.4rem;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid #72a8ff;
+  outline-offset: 2px;
+}
+
+.fullscreen-player {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 1000;
+  padding: 1rem;
+  overflow: auto;
+}
+
+.close-btn {
+  float: right;
+  font-size: 1.4rem;
+}
+
+@media (max-width: 1024px) {
+  .grid-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
